@@ -1,1 +1,13 @@
-local a={8888615802,6516141723}local b="https://raw.githubusercontent.com/alannlol/redware/main/Games/"if table.find(a,game.PlaceId)then local a=table.find(a,game.PlaceId)loadstring(game:HttpGet(b..a..".lua"))()end
+local supported = {
+    8888615802,
+    6516141723,
+}
+
+local repo = "https://raw.githubusercontent.com/alannlol/redware/main/Games/"
+
+if table.find(supported, game.PlaceId) then
+
+    local full = repo..tostring(game.PlaceId)..".lua"
+
+    loadstring(game:HttpGet(full))()
+end
