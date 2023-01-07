@@ -9,4 +9,6 @@ if table.find(supported, game.PlaceId) then
     local gid = table.find(supported, game.PlaceId)
 
     loadstring(game:HttpGet(repo..gid..".lua"))()
+else
+    error("Unsupported game.")
 end
